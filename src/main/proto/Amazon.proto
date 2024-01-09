@@ -1,0 +1,17 @@
+syntax="proto3";
+option java_package="com.Tayana.Proto";
+option java_multiple_files=true;
+
+service AmazonService
+{
+	rpc hello(AmazonRequest) returns (stream AmazonResponse) {};
+}
+
+message AmazonRequest 
+{
+	string request=1;
+}
+message AmazonResponse
+{
+	string response=1 ;
+}
